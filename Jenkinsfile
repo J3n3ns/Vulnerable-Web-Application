@@ -3,8 +3,8 @@ pipeline {
     stages { 
         stage ('Checkout') { 
             steps { 
-                git branch:'master', url: 'https://github.com/OWASP/Vulnerable-Web-Application.git' 
-            } 
+            checkout scm
+	    } 
         } 
          
         stage('Code Quality Check via SonarQube') { 
